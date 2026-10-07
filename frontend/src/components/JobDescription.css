@@ -1,0 +1,50 @@
+.job-description {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.job-description__label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.98rem;
+  margin-bottom: 12px;
+}
+
+.job-description__textarea {
+  flex: 1;
+  min-height: 220px;
+  resize: vertical;
+  width: 100%;
+  padding: 18px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.job-description__textarea::placeholder {
+  color: var(--ink-faint);
+}
+
+.job-description__textarea:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  outline: none;
+}
+
+.job-description__counter {
+  align-self: flex-end;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--ink-faint);
+}
+
+.job-description__counter--near {
+  color: var(--warning);
+}

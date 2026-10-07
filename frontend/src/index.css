@@ -1,0 +1,126 @@
+/* =========================================================
+   Resume ATS Analyzer — design tokens & global styles
+   ========================================================= */
+
+:root {
+  /* Color */
+  --bg: #faf9f7;
+  --ink: #14151f;
+  --ink-soft: #565973;
+  --ink-faint: #8688a0;
+  --surface: #ffffff;
+  --surface-sunken: #f3f2ef;
+  --border: #e6e4ef;
+  --border-strong: #d3d1e2;
+
+  --accent: #5b4fe9;
+  --accent-deep: #3d2fc9;
+  --accent-bright: #8b7bff;
+  --accent-soft: #efecfd;
+  --accent-ink: #2a1f8f;
+
+  --success: #1f8f4e;
+  --success-soft: #e6f5ec;
+  --warning: #b9740f;
+  --warning-soft: #fbf0dc;
+  --danger: #cf3f45;
+  --danger-soft: #fbe9ea;
+
+  /* Type */
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", monospace;
+
+  /* Layout */
+  --max-width: 1180px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-card: 0 1px 2px rgba(20, 21, 31, 0.04), 0 12px 28px -14px rgba(20, 21, 31, 0.16);
+  --shadow-pop: 0 20px 50px -20px rgba(61, 47, 201, 0.35);
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 48px);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,62 @@
+.skill-panel {
+  padding: 24px 26px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.skill-panel__heading {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.skill-panel__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-panel__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.skill-panel--matched {
+  background: var(--success-soft);
+  border-color: rgba(31, 143, 78, 0.25);
+}
+
+.skill-panel--matched .skill-panel__heading {
+  color: var(--success);
+}
+
+.skill-panel--matched .skill-panel__item {
+  color: #1c5c39;
+}
+
+.skill-panel--matched svg {
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+.skill-panel--missing {
+  background: var(--warning-soft);
+  border-color: rgba(185, 116, 15, 0.25);
+}
+
+.skill-panel--missing .skill-panel__heading {
+  color: var(--warning);
+}
+
+.skill-panel--missing .skill-panel__item {
+  color: #7a4c08;
+}
+
+.skill-panel--missing svg {
+  color: var(--warning);
+  flex-shrink: 0;
+}

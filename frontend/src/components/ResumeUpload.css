@@ -1,0 +1,144 @@
+.upload {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.upload__label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.98rem;
+  margin-bottom: 12px;
+}
+
+.upload__dropzone {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4px;
+  padding: 32px 20px;
+  min-height: 220px;
+  border: 1.5px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface-sunken);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.upload__dropzone--active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.upload__dropzone--error {
+  border-color: var(--danger);
+}
+
+.upload__icon {
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.upload__primary-text {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.upload__or {
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  margin: 2px 0;
+}
+
+.upload__browse {
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--ink);
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 2px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.upload__browse:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+.upload__hint {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+}
+
+.upload__file {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 220px;
+  padding: 20px;
+  border: 1px solid var(--success);
+  background: var(--success-soft);
+  border-radius: var(--radius-md);
+}
+
+.upload__file-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--success);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.upload__file-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.upload__file-name {
+  font-weight: 600;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.upload__file-size {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.upload__remove {
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--ink-soft);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.upload__remove:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.upload__error {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--danger);
+  font-weight: 500;
+}

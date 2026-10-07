@@ -1,0 +1,99 @@
+.score-card {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 28px 30px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.score-card__ring {
+  --tone: var(--accent);
+  position: relative;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: conic-gradient(var(--tone) var(--pct), var(--surface-sunken) 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.score-card__ring-inner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+}
+
+.score-card__number {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.score-card__denominator {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  margin-top: 2px;
+}
+
+.score-card__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+}
+
+.score-card__label {
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--tone-ink, var(--ink));
+}
+
+.score-card--poor .score-card__ring {
+  --tone: var(--danger);
+}
+.score-card--poor .score-card__label {
+  color: var(--danger);
+}
+
+.score-card--average .score-card__ring {
+  --tone: var(--warning);
+}
+.score-card--average .score-card__label {
+  color: var(--warning);
+}
+
+.score-card--good .score-card__ring {
+  --tone: var(--accent);
+}
+.score-card--good .score-card__label {
+  color: var(--accent-deep);
+}
+
+.score-card--excellent .score-card__ring {
+  --tone: var(--success);
+}
+.score-card--excellent .score-card__label {
+  color: var(--success);
+}
+
+@media (max-width: 520px) {
+  .score-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
